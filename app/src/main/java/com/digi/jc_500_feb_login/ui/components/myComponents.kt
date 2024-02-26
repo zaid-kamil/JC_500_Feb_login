@@ -1,10 +1,12 @@
 package com.digi.jc_500_feb_login.ui.components
 
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -68,6 +70,31 @@ fun RoundedButton(
     }
 }
 
+@Composable
+fun RectangularButton(
+    modifier: Modifier = Modifier,
+    icon: ImageVector = Icons.Default.Refresh,
+    text: String = "facebook",
+    color: Color = Color.Blue,
+    onClick: () -> Unit,
+) {
+    Button(
+        onClick = onClick,
+        shape = MaterialTheme.shapes.small,
+        modifier = modifier,
+        colors = ButtonDefaults.buttonColors(
+            containerColor = color,
+            contentColor = Color.White
+        )
+    ) {
+        Icon(
+            imageVector = icon,
+            contentDescription = null,
+        )
+        Spacer(modifier = Modifier.width(10.dp))
+        Text(text = text)
+    }
+}
 
 @Preview
 @Composable
