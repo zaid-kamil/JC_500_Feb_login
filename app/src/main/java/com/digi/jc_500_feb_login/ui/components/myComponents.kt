@@ -45,9 +45,17 @@ fun UserInputField(
         shape = MaterialTheme.shapes.extraLarge,
         modifier = modifier,
         colors = TextFieldDefaults.colors(
-            focusedTextColor = Color.Blue,
-            focusedContainerColor = Color.White,
-            unfocusedContainerColor = Color.Transparent,
+            focusedTextColor = MaterialTheme.colorScheme.primary,
+            focusedContainerColor = MaterialTheme.colorScheme.primaryContainer,
+            unfocusedContainerColor = MaterialTheme.colorScheme.secondaryContainer,
+            unfocusedTextColor = MaterialTheme.colorScheme.secondary,
+            cursorColor = MaterialTheme.colorScheme.primary,
+            errorCursorColor = MaterialTheme.colorScheme.error,
+            errorTextColor = MaterialTheme.colorScheme.error,
+            errorContainerColor = MaterialTheme.colorScheme.errorContainer,
+            errorLeadingIconColor = MaterialTheme.colorScheme.error,
+            errorTrailingIconColor = MaterialTheme.colorScheme.error,
+
         )
     )
 }
